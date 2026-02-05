@@ -39,4 +39,15 @@ public class ProductRepositoryImpl implements ProductRepository {
         String sql = "DELETE FROM product WHERE id = ?";
         template.update(sql,id);
     }
+
+    @Override
+    public void update(ProductDto productDto) {
+        String sql = "UPDATE product SET name = ? , price = ? , description = ? , image = ? WHERE id = ?";
+        template.update(sql,productDto.getName(),
+                productDto.getPrice(),
+                productDto.getDescription(),
+                productDto.getImage(),
+                productDto.getId()
+        );
+    }
 }

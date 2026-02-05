@@ -29,4 +29,9 @@ public class ProductServiceImpl implements ProductService {
     public void delete(Integer id) {
         repository.delete(id);
     }
+
+    @Override
+    public void update(ProductDto productDto) {
+        repository.update(productDto);
+    }
 }

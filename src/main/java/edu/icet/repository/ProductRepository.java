@@ -8,4 +8,5 @@ public interface ProductRepository {
     Boolean add(ProductDto productDto);
     List<ProductDto> getAll();
     void delete(Integer id);
+    void update(ProductDto productDto);
 }

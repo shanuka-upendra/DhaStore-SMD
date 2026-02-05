@@ -4,10 +4,7 @@ import edu.icet.dto.ProductDto;
 import edu.icet.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -35,5 +32,10 @@ public class ProductController {
     @DeleteMapping("/delete")
     public void deleteProduct(Integer id){
         service.delete(id);
+    }
+
+    @PutMapping("/update")
+    public void updateProduct(ProductDto productDto){
+        service.update(productDto);
     }
 }
