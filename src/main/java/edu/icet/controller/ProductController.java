@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 public class ProductController {
@@ -22,5 +24,10 @@ public class ProductController {
     @PostMapping("/add-product")
     public Boolean addProduct(ProductDto productDto){
         return service.add(productDto);
+    }
+
+    @GetMapping("/search-all")
+    public List<ProductDto> searchAll(){
+        return service.getAll();
     }
 }

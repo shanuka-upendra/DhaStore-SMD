@@ -17,10 +17,11 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Boolean add(ProductDto productDto) {
         return repository.add(productDto);
+
     }
 
     @Override
     public List<ProductDto> getAll() {
-        return List.of();
+        return repository.getAll();
     }
 }
