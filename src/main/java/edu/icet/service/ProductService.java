@@ -6,4 +6,5 @@ import java.util.List;
 public interface ProductService {
     Boolean add(ProductDto productDto);
     List<ProductDto> getAll();
+    void delete(Integer id);
 }

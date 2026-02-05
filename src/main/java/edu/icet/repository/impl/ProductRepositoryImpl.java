@@ -33,4 +33,10 @@ public class ProductRepositoryImpl implements ProductRepository {
                 rs.getString(5)
         ));
     }
+
+    @Override
+    public void delete(Integer id) {
+        String sql = "DELETE FROM product WHERE id = ?";
+        template.update(sql,id);
+    }
 }

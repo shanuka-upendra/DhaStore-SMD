@@ -4,6 +4,7 @@ import edu.icet.dto.ProductDto;
 import edu.icet.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,5 +30,10 @@ public class ProductController {
     @GetMapping("/search-all")
     public List<ProductDto> searchAll(){
         return service.getAll();
+    }
+
+    @DeleteMapping("/delete")
+    public void deleteProduct(Integer id){
+        service.delete(id);
     }
 }

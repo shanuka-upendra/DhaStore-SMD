@@ -24,4 +24,9 @@ public class ProductServiceImpl implements ProductService {
     public List<ProductDto> getAll() {
         return repository.getAll();
     }
+
+    @Override
+    public void delete(Integer id) {
+        repository.delete(id);
+    }
 }
