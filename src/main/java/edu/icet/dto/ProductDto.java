@@ -1,4 +1,4 @@
-package edu.icet.model;
+package edu.icet.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,7 +9,8 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Product {
+public class ProductDto {
+    private Integer id;
     private String name;
     private double price;
     private String description;
